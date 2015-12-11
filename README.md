@@ -24,6 +24,8 @@ To do a different xml file, place it in `/public/data` and change enum `DATA_FIL
 
 In order to limit what data is sent to the front end, you're going to edit `controllers/xmltojson`. Best thing to do here would just be to change the meat of the `function limitTheJson`. I've included a package called [lodash](https://lodash.com/) in that file that you may find useful in managing objects, arrays with a super powerful, but simple, interface.
 
+In order to test that your json minimization is working, just navigate to http://localhost:8080/convert/NAME_OF_FILE and the converted json will be displayed on the page
+
 ## Adding Cytoscape
 
-I'll look into this tomorrow a little cause I'm not super postiive, but I assume that at some point you'll need to give a static javascript file the data, which is definitely doable, just too late to focus on right now. I would just work on managing this massive json first and getting the data that you want/need before doing frontend work. We'll do this weekend.
+I'll look into this tomorrow a little cause I'm not super postive, but I assume that at some point you'll need to give a static javascript file the data, which is definitely doable, just too late to focus on right now. I would just work on managing this massive json first and getting the data that you want/need before doing frontend work. We'll do this weekend.

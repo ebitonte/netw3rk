@@ -8,10 +8,12 @@ app.set('view engine', 'ejs');
 // ROUTES FILES
 var routes = require("./routes/route");
 var convert = require("./routes/convert");
+var visual = require("./routes/visual");
 
 // ROUTER SETUP
 app.use('/', routes);
 app.use("/convert", convert);
+app.use("/visual", visual);
 
 app.use(express.static('public'));
 

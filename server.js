@@ -6,10 +6,12 @@ const PORT=8080;
 app.set('view engine', 'ejs');
 
 // ROUTES FILES
-var routes = require('./routes/route');
+var routes = require("./routes/route");
+var convert = require("./routes/convert");
 
 // ROUTER SETUP
 app.use('/', routes);
+app.use("/convert", convert);
 
 app.use(express.static('public'));
 

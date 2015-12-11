@@ -4,13 +4,13 @@ var path = require("path");
 var _ = require("lodash");
 
 function xmltojson(fileName, callback) {
-    fs.readFile(path.join(__dirname, "../public/data", fileName), function(err, data) {
+    fs.readFile(path.join(__dirname, "../public/data", fileName + ".xml"), function(err, data) {
         if (err) {
-            return;
+            return callback(data, err);
         }
         parser.parseString(data, function(err, result) {
             if (err) {
-                return;
+                return callback(result, err);
             }
             result = limitTheJson(result);
             return callback(result);

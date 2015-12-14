@@ -26,7 +26,7 @@ function xmltojson(fileName, callback) {
     });
 }
 
-function reduceExample(largeJson) {
+function processExample(largeJson) {
     var smallJson = largeJson;
 
     return smallJson;

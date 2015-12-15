@@ -1,12 +1,7 @@
 $(function() {
-    var fileName = $("#fileName").text();
-    var dataUrl;
-    console.log(fileName)
-    if (true) {
-        dataUrl = "https://cdn.rawgit.com/maxkfranz/3d4d3c8eb808bd95bae7/raw"
-    } else {
-        dataUrl = "/convert/" + fileName;
-    }
+    var fileName = $("#fileName").data("filename");
+    
+    var dataUrl = "/convert/" + fileName;
 
     var dataPromise = $.ajax({
         url: dataUrl,

@@ -26,6 +26,14 @@ In order to limit what data is sent to the front end, you're going to edit `cont
 
 In order to test that your json minimization is working, just navigate to http://localhost:8080/convert/NAME_OF_FILE and the converted json will be displayed on the page
 
-## Adding Cytoscape
+## Visual
 
-I'll look into this tomorrow a little cause I'm not super postive, but I assume that at some point you'll need to give a static javascript file the data, which is definitely doable, just too late to focus on right now. I would just work on managing this massive json first and getting the data that you want/need before doing frontend work. We'll do this weekend.
+Go to `http://localhost/visual/FILE_NAME` and the code that exists will at the minimum get the converted JSON. It isn't really possible to just have a built in visualization working, so that is up to you to work in [cytoscape.js](public/javascripts/cytoscape.js) to add in the required functionality in whatever way you see fit. Also, css work can all be done in [main.css](public/stylesheets/main.css).
+
+## Getting these changes
+
+```
+git remote add origin https://github.com/ebitonte/netw3rk.git
+git fetch origin
+git rebase origin/master
+```
